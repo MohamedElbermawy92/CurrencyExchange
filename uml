@@ -1,0 +1,39 @@
++---------------------------+
+|       CurrencyController   |
++---------------------------+
+| - currencyService:         |
+| - currencyConversionService:|
++---------------------------+
+| + calculate(billDetails):  |
++---------------------------+
+            |
+            v
++---------------------------+
+|       CurrencyService      |
++---------------------------+
+| + calculateDiscountedAmount|
++---------------------------+
+
++---------------------------+
+|   CurrencyConversionService |
++---------------------------+
+| + convertCurrency(amount,  |
+|   fromCurrency, toCurrency)|
++---------------------------+
+            |
+            v
++---------------------------+
+|      CurrencyExchangeResponse |
++---------------------------+
+| + getRates()                |
++---------------------------+
+
++---------------------------+
+|      BillDetails           |
++---------------------------+
+| - amount                   |
+| - fromCurrency              |
+| - toCurrency                |
+| - userType                  |
+| - customerTenure            |
++---------------------------+
